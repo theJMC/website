@@ -51,7 +51,14 @@
       }
     } else {
       $("#main-title").attr("src", "/assets/img/icons/Black.png")
-      $("#main-title").attr("style", "height: 30px;")
+      if (document.documentElement.clientWidth <= 430 && document.documentElement.clientWidth > 350){
+        $("#main-title").attr("style", "height: 40px;")
+      } else if (document.documentElement.clientWidth <= 350 && document.documentElement.clientWidth > 300){
+        $("#main-title").attr("style", "height: 30px;")
+      } else if (document.documentElement.clientWidth <= 300){
+        $("#main-title").attr("style", "height: 25px;")
+      }
+      
     }
     
   };
