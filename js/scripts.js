@@ -51,6 +51,7 @@
       }
     } else {
       $("#main-title").attr("src", "/assets/img/icons/Black.png")
+      $("#main-title").attr("style", "height: 30px;")
     }
     
   };
