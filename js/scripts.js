@@ -35,8 +35,10 @@
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-scrolled");
+      $("#main-title").attr("src", "/assets/img/icons/Black.png")
     } else {
       $("#mainNav").removeClass("navbar-scrolled");
+      $("#main-title").attr("src", "/assets/img/icons/White.png")
     }
   };
   // Collapse now if page is not at top
