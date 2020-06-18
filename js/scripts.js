@@ -3,8 +3,16 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
     */
+
+    var isMobile = (document.documentElement.clientWidth <= 990);
+
+
     (function($) {
   "use strict"; // Start of use strict
+
+  if (isMobile) {
+    $("#main-title").attr("src", "/assets/img/icons/Black.png")
+  };
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -33,13 +41,18 @@
 
   // Collapse Navbar
   var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-scrolled");
-      $("#main-title").attr("src", "/assets/img/icons/Black.png")
+    if (!isMobile){
+      if ($("#mainNav").offset().top > 100) {
+        $("#mainNav").addClass("navbar-scrolled");
+        $("#main-title").attr("src", "/assets/img/icons/Black.png")
+      } else {
+        $("#mainNav").removeClass("navbar-scrolled");
+        $("#main-title").attr("src", "/assets/img/icons/White.png")
+      }
     } else {
-      $("#mainNav").removeClass("navbar-scrolled");
-      $("#main-title").attr("src", "/assets/img/icons/White.png")
+      $("#main-title").attr("src", "/assets/img/icons/Black.png")
     }
+    
   };
   // Collapse now if page is not at top
   navbarCollapse();
