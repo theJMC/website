@@ -50,6 +50,7 @@
         $("#main-title").attr("src", "/assets/img/icons/White.png")
       }
     } else {
+      $("#sizeTitle").text(document.documentElement.clientWidth)
       $("#main-title").attr("src", "/assets/img/icons/Black.png")
       if (document.documentElement.clientWidth <= 430 && document.documentElement.clientWidth > 350){
         $("#main-title").attr("style", "height: 40px;")
